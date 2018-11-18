@@ -1,0 +1,66 @@
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+	.smalllogo img, .smalllogo svg, .largelogo img, .largelogo svg{
+		max-height:80px;	
+	}
+	
+	header {
+		.ctas {
+			.callbackbtn:before{
+				background-size:6.5em !important;
+			}
+			.digibtn:before{
+				background-size:5.3em !important;
+			}
+		
+			.claimbtn:before{
+				background-size:5.3em !important;
+			}
+		}
+	   .ctas-wrap {
+		   .ctas {
+			   .purple {
+				   .icon-call-us::after{
+						content:" ";
+						height:2em;
+						display:inline-block;
+						background-image:url("images/bluebubble@4x.svg");
+						background-repeat:no-repeat;
+						background-size:cover;
+						display:inline-block;
+				   }
+			   }
+		   }
+		}	
+	}
+	
+	
+	aside{
+		.ctas-wrap{
+			.ctas{
+				.callbackbtn::before{
+					background-size:150% !important;
+				}
+				
+				.digibtn::before{
+					background-size:120% !important;
+				}
+				
+				.claimbtn::before{
+					background-size:120% !important;
+				}
+				.purple {
+				   .icon-call-us::after{
+						content:" ";
+						height:2em;
+						display:inline-block;
+						background-image:url("images/bluebubble@4x.svg");
+						background-repeat:no-repeat;
+						background-size:cover;
+						display:inline-block;
+				   }
+			   }
+			}	
+		}
+	}
+
+}

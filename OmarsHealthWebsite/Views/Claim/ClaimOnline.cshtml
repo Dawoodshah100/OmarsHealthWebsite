@@ -1,0 +1,219 @@
+﻿@using OmarsHealthWebsite.Models;
+@model ClaimOnline
+<style>
+  
+    .center {
+        color: #fff;
+        margin: auto;
+        width: 50%;
+        border: 3px solid #fff;
+        padding: 10px;
+        background-color: #1b98c7;
+    }
+    input {
+        color: black;
+        width: 100%;
+        border: solid 1px #3e285e !important;
+        color: #3e285e !important;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid transparent;
+        color: #55595c;
+        display: block;
+        font-size: 0.9rem;
+        line-height: 2;
+        height: auto;
+        transition: border-color 0.15s ease 0s;
+        width: 100%;
+        padding: 8px 12px;
+        /* border-radius: 0; */
+    }
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(1.3); /* IE */
+            -moz-transform: scale(1.3); /* FF */
+            -webkit-transform: scale(1.3); /* Safari and Chrome */
+            -o-transform: scale(1.3); /* Opera */
+            padding: 10px;
+        }
+
+    
+</style>
+<div class="center">
+    @using (Html.BeginForm("ClaimOnline", "Claim", FormMethod.Post, new { @class = "goldmine_callback"}))
+    {
+    <fieldset>
+        <div class="form-group">
+            @Html.Label("Are you making a claim for yourself or someone else?")
+            @Html.EnumDropDownListFor(x => x.Identity, new { @class = "form-control", required = "required" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.InjuryType)
+            @Html.EnumDropDownListFor(x => x.InjuryType, new { @class = "form-control", required = "required" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.InEnglandOrWalesInjury)
+            @Html.CheckBoxFor(x => x.InEnglandOrWalesInjury, new { @class = "form-control", })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.InjuryParts)
+            @Html.EnumDropDownListFor(x => x.InjuryParts, new { @class = "form-control", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.InjuryInnerParts)
+            @Html.EnumDropDownListFor(x => x.InjuryInnerParts, new { @class = "form-control", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.IsAbleToWork)
+            @Html.CheckBoxFor(x => x.IsAbleToWork, new { @class = "form-control",  })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.IsInjured)
+            @Html.CheckBoxFor(x => x.IsInjured, new { @class = "form-control", })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.LegalAdvice)
+            @Html.CheckBoxFor(x => x.LegalAdvice, new { @class = "form-control",  })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.TimeAffected)
+            @Html.EditorFor(x => x.TimeAffected, new { @class = "form-control", required = "required" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.CallMeBack.FirstName)
+            @Html.TextBoxFor(x => x.CallMeBack.FirstName, new { @class = "form-control first_name", placeholder = "First Name", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.CallMeBack.LastName)
+            @Html.TextBoxFor(x => x.CallMeBack.LastName, new { @class = "form-control first_name", placeholder = "First Name", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.CallMeBack.PhoneNumber)
+            @Html.TextBoxFor(x => x.CallMeBack.PhoneNumber, new { @class = "form-control phone_number", placeholder = "Phone Number", required = "required" })
+        </div>
+
+
+        <button class="btn btn-red btn-block" style="border-color:white;" type="submit" name="name" value="Call Me Back">Call Me Back</button>
+
+    </fieldset>
+    }
+</div>
+<!--
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="~/Content/ClaimOnline.css" rel="stylesheet" />
+<nahl-app _nghost-c0="" ng-version="4.2.5">
+    <main _ngcontent-c0="">
+        <section _ngcontent-c0="" class="nahl-section-fluid">
+            <router-outlet _ngcontent-c0=""></router-outlet><nahl-questionnaire _nghost-c1="">
+                <section _ngcontent-c1="" class="nahl-questionnaire">
+                    <nahl-questionnaire-screen _ngcontent-c1="" class="nahl-table" _nghost-c2="">
+                        <nahl-back-button _ngcontent-c2="" _nghost-c4="">
+                           
+
+                        </nahl-back-button>
+
+                        <div _ngcontent-c2="" class="nahl-questionnaire-screen">
+                            <nahl-on-screen-debug-toggle _ngcontent-c2="" _nghost-c5="">
+                               
+                            </nahl-on-screen-debug-toggle>
+
+                            <nahl-on-screen-debug _ngcontent-c2="" _nghost-c6="">
+                               
+                            </nahl-on-screen-debug>
+
+                           
+                           <nahl-questionnaire-screen-element _ngcontent-c2="" class="nahl-block" _nghost-c8="">
+                                <div _ngcontent-c8="" class="nahl-questionnaire-screen-element">
+                                    <nahl-on-screen-debug _ngcontent-c8="" _nghost-c6="">
+                                       
+                                    </nahl-on-screen-debug>
+
+                                    <nahl-thumbs-up _ngcontent-c8="" class="nahl-inline-block nahl-hide" _nghost-c7="">
+                                        <div _ngcontent-c7="" class="nahl-thumbs-up">
+                                            <svg _ngcontent-c7="" class="thumbs-up-svg" data-name="thumbs-up" viewBox="0 0 118 116" xmlns="http://www.w3.org/2000/svg">
+                                                <title _ngcontent-c7="">
+                                                    Thumbs Up Image
+                                                </title>
+                                                <g _ngcontent-c7="" data-name="thumbs-up">
+                                                    <path _ngcontent-c7="" class="circle" d="M59 115.61c32.38 0 58.63-25.79 58.63-57.61S91.38.39 59 .39.38 26.18.38 58 26.62 115.61 59 115.61z" fill="#b2e8ed" opacity=".1"></path>
+                                                    <ellipse _ngcontent-c7="" class="circle" cx="59.5" cy="58" fill="#b2e8ed" opacity=".15" rx="58.13" ry="57"></ellipse>
+                                                    <ellipse _ngcontent-c7="" cx="59" cy="58" fill="#b2e8ed" opacity=".5" rx="58" ry="57"></ellipse>
+                                                    <path _ngcontent-c7="" d="M51.6 76.52a6.68 6.68 0 0 1-6.76 6.59h-8.92a6.68 6.68 0 0 1-6.76-6.59V55.45a6.68 6.68 0 0 1 6.76-6.59h8.91a6.68 6.68 0 0 1 6.76 6.59v21.07z" fill="#008590"></path>
+                                                    <path _ngcontent-c7="" d="M41.84 74.79a1.68 1.68 0 0 1-1.69 1.67h-.51a1.68 1.68 0 0 1-1.71-1.65v-.5a1.68 1.68 0 0 1 1.69-1.67h.51a1.68 1.68 0 0 1 1.71 1.65v.5" fill="#b2e8ed"></path>
+                                                    <path _ngcontent-c7="" d="M63.88 83.46c-4.49 0-9.32-.56-11-7.2 0-.13.06-.27.06-.41V53.6a1.65 1.65 0 0 1 0-.71l.31-.79c.5-1.52 2-3.84 4.34-7.42a52.82 52.82 0 0 0 3.8-6.28 15.52 15.52 0 0 0 .8-6 1.75 1.75 0 0 1 .87-1.65 7 7 0 0 1 3.29-.86 5.62 5.62 0 0 1 3.1.91c2.55 1.63 5.37 4.2 4.82 9.44A15.46 15.46 0 0 1 72.7 45a19.57 19.57 0 0 0-1.12 2.81 6.55 6.55 0 0 0-.06 1.07c2 .17 3.95.32 5.73.32h4.86a5.94 5.94 0 0 1 1 0A7.39 7.39 0 0 1 88 51.92a7 7 0 0 1 1.45 5.33A7.16 7.16 0 0 1 86.7 62a6.28 6.28 0 0 1-1.46 7.87v.07a5.48 5.48 0 0 1 .41 2.95 5.61 5.61 0 0 1-2.15 3.66 4.58 4.58 0 0 1 .3 2.45 4.75 4.75 0 0 1-3.27 3.8 9.6 9.6 0 0 1-4.18.63h-5.08c-1.43 0-2.78 0-4.08.08s-2.27.08-3.3.08z" fill="#fff"></path>
+                                                    <path _ngcontent-c7="" d="M72.93 77.7c-.12 0-.23.21-.32.2a1 1 0 0 1-1-1v-.05a1.06 1.06 0 0 1 1-1.11A1.19 1.19 0 0 1 74 76.9c0 .18 0 .12-.09.26-.15.45-.53.54-1 .54m-8.29.79a8.6 8.6 0 0 1-7.34-3.16 1.19 1.19 0 0 1 .11-1.65 1.13 1.13 0 0 1 1.59.1c2.25 2.67 4.54 2.51 8.69 2.2l1.64-.11a1.17 1.17 0 0 1 .13 2.33l-1.62.12c-1.14.08-2.21.15-3.23.15" fill="#b2e8ed"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </nahl-thumbs-up>
+
+                                   
+                                   
+
+                                    <div _ngcontent-c8="" class="nahl-questionnaire-screen-element-container"></div><nahl-questionnaire-content-element _nghost-c13="">
+                                        <div _ngcontent-c13="" class="nahl-questionnaire-screen-content-element">
+                                            <nahl-glossary _ngcontent-c13="" _nghost-c11="">
+                                                <div _ngcontent-c11=""><p>This process uses automated decision-making to assess whether you have a potential claim. If you would prefer to speak to one of our Legal Support Advisers instead, please 
+                                                    <a href="#">click here.</a></p></div>
+                                            </nahl-glossary>
+                                        </div>
+                                    </nahl-questionnaire-content-element>
+                                </div>
+                            </nahl-questionnaire-screen-element>
+
+                           <nahl-footer _ngcontent-c2="" class="nahl-block" _nghost-c9="">
+                                <div _ngcontent-c9="" class="nahl-footer landscape" nahlorientationdetector="">
+                                   
+                                   <button _ngcontent-c9="" class="nahl-button" id="firstb" type="submit">
+                                        Let's go
+
+                                        <i _ngcontent-c9="" class="nahl-icon nahl-icon-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </nahl-footer>
+
+                            <nahl-progress-bar _ngcontent-c2="" class="nahl-inline-block nahl-hide" _nghost-c10="">
+                                <div _ngcontent-c10="" class="nahl-progress-bar">
+                                    <div _ngcontent-c10="" class="nahl-wrapper">
+                                        <div _ngcontent-c10="" class="nahl-progress-status" style="width: 33%;"></div>
+                                        <div _ngcontent-c10="" class="nahl-dots">
+                                            <span _ngcontent-c10="" class="nahl-dot -has-state"></span>
+                                            <span _ngcontent-c10="" class="nahl-dot -has-state -on-state"></span>
+                                            <span _ngcontent-c10="" class="nahl-dot"></span>
+                                            <span _ngcontent-c10="" class="nahl-dot"></span>
+                                        </div>
+                                        <div _ngcontent-c10="" class="nahl-labels">
+                                            <span _ngcontent-c10="" class="nahl-label -has-state">Step 1</span>
+                                            <span _ngcontent-c10="" class="nahl-label -has-state">Step 2</span>
+                                            <span _ngcontent-c10="" class="nahl-label">Step 3</span>
+                                            <span _ngcontent-c10="" class="nahl-label">Step 4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nahl-progress-bar>
+                        </div>
+                    </nahl-questionnaire-screen>
+                </section>
+
+                <nahl-tooltip-container _ngcontent-c1="" _nghost-c3="">
+                    <div _ngcontent-c3="" class="nahl-tooltip-container">
+                        <div _ngcontent-c3="" class="nahl-tooltip">
+                            <div _ngcontent-c3="" class="nahl-tooltip-overlay"></div>
+                            <div _ngcontent-c3="" class="nahl-tooltip-content-container" style="top: 261.5px;">
+                                <div _ngcontent-c3="" class="nahl-tooltip-content" style="max-height: 273px;">
+                                    <p _ngcontent-c3="" class="nahl-tooltip-text"></p>
+                                </div>
+
+                                <a _ngcontent-c3="" class="nahl-tooltip-close-button"></a>
+                            </div>
+                        </div>
+                    </div>
+                </nahl-tooltip-container>
+            </nahl-questionnaire>
+        </section>
+    </main>
+</nahl-app> -->
+

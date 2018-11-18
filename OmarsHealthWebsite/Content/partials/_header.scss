@@ -1,0 +1,793 @@
+/* Scss Document */
+/*header styles start*/
+header
+{
+	width:100%;
+	padding:0.5rem 0 0.5rem 0;
+	background-color:#fff;
+	position:relative;
+	z-index:10000;
+	.desktopcta{
+		float:right;
+	}	
+	.btn{
+		font-size:0.8em;
+	}	
+	.icon
+	{
+		color:$brandcolour2;
+	}
+	.callbackbtn{
+		border:2px solid $brandcolour1;
+		overflow: hidden;
+    	padding-left: 4.6em;
+	}
+	.callbackbtn:before{
+		content:" ";
+		background:$white url(images/let_us_call@4x.svg) no-repeat center center / 85%;
+		display:block;
+		height:100%;
+		width:4em;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+	}
+	.digibtn{
+		border:2px solid $brandcolour1;
+		overflow: hidden;
+    	padding-left: 4.6em;
+	}
+	.digibtn:before{
+		content:" "; 
+		background:$white url(images/online@x4.svg) no-repeat center center / 65%;
+		display:block;
+		height:100%; 
+		width:4em;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+	}
+	.claimbtn{
+		border:2px solid $brandcolour1;
+		overflow: hidden;
+    	padding-left: 4.6em;
+	}
+	.claimbtn:before{
+		content:" ";
+		background:$white url(images/online@x4.svg) no-repeat center center / 65%;
+		display:block;
+		height:100%; 
+		width:4em;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+	}
+	
+	.ctas-wrap
+	{
+		text-align:right;
+		.ctas
+		{
+			div.purple
+			{
+				span a 
+				{
+					color: #3e285e;
+					font-size: 2.3em;
+					line-height: 0;
+					position: relative;
+					display:inline-block;
+					vertical-align:middle;
+					top:0;
+				}
+			}
+		}
+	}
+
+	.sticky-phone{
+		display: block;
+	    float: left;
+	    margin-right: 10px;
+	    font-size: 1.6em;
+	    margin-top: 7px;
+	    a{
+	    	color: #3e285e;
+	    }
+	}
+
+	.mobilecta{
+		display: none;
+	}
+
+	.mobilectas{
+		display: block;
+	}
+		
+}
+
+.stickyheader
+{
+	position:fixed;
+	padding:0;
+	.ctas{
+		.btn{
+			padding:0.5em 3em 0.5em 1em;
+			font-size:0.8em;
+		}	
+		.callbackbtn{
+		border:2px solid $brandcolour1;
+		overflow: hidden;
+    	padding-left: 4.6em;
+	}
+		.callbackbtn:before{
+			content:" ";
+			background:$white url(images/let_us_call@4x.svg) no-repeat center center / 85%;
+			display:block;
+			height:100%;
+			width:4em;
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+		}
+		.digibtn{
+			border:2px solid $brandcolour1;
+			overflow: hidden;
+			padding-left: 4.6em;
+		}
+		.digibtn:before{
+			content:" ";
+			background:$white url(images/online@x4.svg) no-repeat center center / 65%;
+			display:block;
+			height:100%;
+			width:4em;
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+		}
+		.claimbtn{
+			border:2px solid $brandcolour1;
+			overflow: hidden;
+			padding-left: 4.6em;
+		}
+		.claimbtn:before{
+			content:" ";
+			background:$white url(images/online@x4.svg) no-repeat center center / 65%;
+			display:block;
+			height:100%;
+			width:4em;
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+		}
+	}	
+	
+	.ctas-wrap
+	{
+		text-align:right;
+		.ctas
+		{
+			div.purple
+			{
+				span a 
+				{
+					color: #3e285e;
+					font-size: 28px;
+					line-height: 0;
+					position: relative;
+					display:inline-block;
+					vertical-align:middle;
+					top:0;
+				}
+			}
+		}
+	}
+	.startclaimheader i, .startclaimheader strong, .callbackheader
+	{
+		display:none;
+	}
+	
+	.phoneheader
+	{
+		float:right;
+	}
+	
+	.phoneheader
+	{	
+		width:100% !important;
+		
+		h2, .callus
+		{
+			display:inline
+		}
+		
+		.callus
+		{
+			margin-right:15px;
+		}
+	}
+
+	.sticky-phone{
+		display: none;
+	}
+
+	.mobilecta{
+		display: inline-block;
+		vertical-align:middle;
+	}
+
+	.mobilectas{
+		display: none !important;
+	}
+}
+
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid transparent;
+    color: #55595c;
+    display: block;
+    font-size: 0.9rem;
+    line-height: 2;
+    height: auto;
+    transition: border-color 0.15s ease 0s;
+    width: 100%;
+    padding: 8px 12px;
+    /*border-radius:0;*/
+    border: solid 1px #3e285e !important;
+    color: #3e285e !important;
+}
+
+.callbackheader, .phoneheader
+	{
+		float:right;
+	}
+
+.phoneheader
+{
+	color:$brandcolour3;
+	font-weight:bold;
+	text-align:right;
+	.icon
+	{
+		color:$brandcolour3;
+	}
+	.infinityPhoneNumber
+	{
+		color:$brandcolour3;
+		font-weight:bold !important;
+	}
+	h2
+	{
+		font-size:35px;
+		margin:0;
+	}
+	.smaller
+	{
+		font-size:25px;
+		margin-right:10px;
+	}
+}
+
+.logo
+{
+	img, svg
+	{
+		max-width: 100%;
+		height: 60px;
+		margin-top: 1px;
+		//margin-left: 8px;
+		width: 170px;
+	}
+}
+
+.largelogo
+{
+	img, svg
+	{
+		width:170px;
+		height: 95px;
+
+		@media (max-width: 768px){
+			height: 60px;
+		}
+	}
+}
+
+.smalllogo
+{
+	img, svg
+	{
+		width:125px;
+	}
+}
+
+.headerfont
+{
+	font-size:12px;
+}
+
+/*header styles ends*/
+
+/*tel number starts*/
+telnumber
+{
+	color:$brandcolour3;
+	font-weight:bold;
+}
+/*tel number ends*/
+
+/*header form starts*/
+#callback_form_header 
+{
+	input, .btn-group button
+	{
+		border:solid 1px $brandcolour3 !important;
+		color:$brandcolour3 !important;
+	}
+	
+	.btn-group 
+	{
+		button:hover, button:active, button.selected
+		{
+			border:solid 1px $brandcolour3 !important;
+			color:$white !important;
+			background:$brandcolour3 !important;
+		}
+	}
+
+}
+/*header form ends*/
+
+
+/* HEADER CTAs STYLES START */
+.logo {
+	img {
+		min-width: 100px;
+	}
+}
+header {
+	.ctas-wrap 
+	{
+		float: right;
+		margin-bottom: 15px;
+		
+		.ctas-title 
+		{
+			h4 
+			{
+				color: $brandcolour3;
+				margin-top: 0;
+				margin-left: -5px;
+				margin-bottom: 15px;
+				font-size: 1.25em;
+				text-align: right !important;
+			}
+		}
+		
+		.ctas
+		{
+			div
+			{
+				display: inline-block;
+				color: white;
+				position: relative;
+				margin-right: 10px;
+				font-size: 0.95em;
+				cursor: pointer;
+				
+				a, a:hover, a:focus, a:active
+				{
+					color:$white;
+					font-weight:normal;
+				}
+				
+				img
+				{
+					height: 40px;
+					left: -7px;
+					position: absolute;
+					top: -21%;
+					width: 40px;
+					transition: all 0.1s ease 0s;
+				}
+				
+			}
+			
+			.purple
+			{
+				margin-right: 0;
+				margin-left:10px;
+				color:$brandcolour3;
+				display:inline-block;
+				vertical-align:middle;
+				i{
+					font-size:0.8em;
+				}	
+				.icon-call-us::after {
+					content: url("images/bluebubble@4x.svg");
+					display: block;
+					float: left;
+					margin: auto;
+					right: -10px;
+					text-align: right;
+					width: 2em;
+					position:relative;
+					margin-left:-15px;
+				}	
+				span{
+					a{
+						color:$brandcolour3;
+						font-weight:400;
+					}	
+				}
+			}
+			
+			div:hover
+			{
+				img
+				{
+					height: 45px;
+					top: -28%;
+					width: 45px;
+					left: -9px;
+				}
+			}
+		}
+	}
+}
+
+
+
+header .ctas-wrap .ctas div.red span {
+	background: #e41f0d;
+}
+header .ctas-wrap .ctas div.blue:hover span {
+	background: #00aac3;
+}
+header .ctas-wrap .ctas div.yellow:hover span {
+	background: #e5b033;
+}
+header .ctas-wrap .ctas div.purple:hover span {
+	background: #4acd82;
+}
+header .ctas-wrap .ctas div.red:hover span {
+	background: #ed3b32;
+}
+header .ctas-wrap .ctas div:hover span:after {
+	right: 5px;
+}
+/* STICKY HEADER CTAs STYLES START */
+header.stickyheader .ctas-wrap {
+	margin-bottom: 5px;
+}
+header.stickyheader .ctas-wrap .ctas-title h4 {
+	font-size: 1.1em;
+	margin-bottom: 10px;
+}
+header.stickyheader .ctas-wrap .ctas div {
+	font-size: 0.8em;
+}
+header.stickyheader .ctas-wrap .ctas div img {
+	height: 35px;
+	width: 35px;
+}
+header.stickyheader .ctas-wrap .ctas div:hover img {
+	height: 39px;
+	top: -28%;
+	width: 39px;
+	left: -9px;
+}
+header.stickyheader .ctas-wrap .ctas div span:after {
+	height: 11px;
+	width: 11px;
+}
+
+/* STICKY HEADER CTAs STYLES END */
+
+
+
+/*mobileheader styles start*/
+.hamburgericon
+{
+	font-size:1.6rem;
+	display:inline-block;
+	vertical-align:middle;
+	font-family:fontawesome;
+	opacity:1;
+	.icon
+	{
+		font-family:fontawesome;
+		color:$brandcolour1;
+		opacity:1;
+	}
+}
+
+.mobilecta
+{
+	display:table-cell;
+	vertical-align:middle;
+	padding-right:1rem;
+	
+	.btn
+	{
+		/*border:0;
+		padding:0.5rem;*/
+	}
+}
+
+.mobilemenu
+{
+	float:right;
+	display:table;
+}
+/*mobileheader styles end*/
+
+
+/*media queries*/
+/*media queries*/
+@media only screen and (max-width: 1108px){
+	
+	header
+	{
+		.ctas-wrap
+		{
+			.ctas
+			{ 
+				a.btn
+				{
+					font-size: 0.7rem;
+				}
+			}
+		}
+	}
+}
+	
+@media only screen and (max-width: 981px){
+	header{
+			.ctas-wrap
+			{
+				.ctas
+				{
+					div
+					{
+						font-size:0.7em !important;
+						margin-right:0 !important;
+					}
+					div.purple
+					{
+						span a 
+						{
+							color: #3e285e;
+							font-size: 2.2em;
+							line-height: 0;
+							position: relative;
+							display:inline-block;
+							vertical-align:middle;
+						}
+					}
+					.callbackbtn, .digibtn{
+						padding-left:3.6em;
+					}
+					.callbackbtn::before, .digibtn::before{
+						width:3em;
+					}	
+				}
+			}
+	}
+}
+
+@media only screen and (max-width: 834px){
+	
+	header
+	{
+		.headerfont{
+			padding:0;
+			max-width:140px;
+		}	
+		.desktopcta{
+			width:80%;
+			padding:0 9px;
+		}	
+		.ctas-wrap
+		{
+			.ctas
+			{ 
+				a.btn
+				{
+					font-size: 0.65rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px){
+	
+	header
+	{
+		.container{
+			padding:0;
+			.row{
+				margin:0;
+				.headerfont{
+					padding:0;
+					.logo{
+						padding:0;
+					}	
+				}
+				.mobile-menu{
+					max-width:100%;
+					.btn{
+						font-size:0.8rem !important;
+					}	
+				}	
+			}
+			.digibtn:before {
+				width: 3em;
+			}
+			.callbackbtn:before {
+				width: 3em;
+			}
+		}	
+		
+		.ctas-wrap
+		{
+			.ctas
+			{
+				.close
+				{
+					font-size:1.2rem !important;
+				}
+				
+				div.btn
+				{
+					font-size:1.2rem !important;
+					
+					a 
+					{
+						font-size:1.2rem !important;
+						float:left;
+						width:100%;
+					}
+				}
+				div.purple
+				{
+					font-size:1rem !important;
+										
+					span a 
+					{
+						top:-8px;
+						font-size:2rem;
+					}
+				}
+			}
+		}
+	}
+	
+	.desktopcta
+	{
+		display:none;
+	}
+	
+	.mobilemenu, .mobilectas
+	{
+		display:block !important;
+	}
+}
+
+@media only screen and (max-width: 410px){
+	header{
+		.sticky-phone{
+			margin-top:-2px;
+			font-size: 1.4em;
+		}
+
+		.mobilectas{
+			.callbackbtn{
+				padding-left:3.6em;
+
+			}
+			.callbackbtn:before{
+				width: 3em;
+			}
+
+			.digibtn{
+				padding-left:3.6em;
+
+			}
+			.digibtn:before{
+				width: 3em;
+			}
+		}
+	}
+	.stickyheader .mobilecta{
+	}
+}
+
+@media only screen and (max-width: 360px){
+	header{
+		.mobilectas{
+			.callbackbtn{
+				padding-left:3.2em;
+
+			}
+			.callbackbtn:before{
+				width: 2.6em;
+			}
+
+			.digibtn{
+				padding-left:3.2em;
+
+			}
+			.digibtn:before{
+				width: 2.6em;
+			}
+		}
+	}	
+	.stickyheader .mobilecta{
+		margin-top: 0px;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	header{
+		.mobilectas{
+			.callbackbtn{
+				padding-left:3em;
+				font-size: 0.7em;
+
+			}
+			.callbackbtn:before{
+				width: 2.4em;
+			}
+
+			.digibtn{
+				padding-left:3em;
+				font-size: 0.7em;
+
+			}
+			.digibtn:before{
+				width: 2.4em;
+			}
+		}
+	}
+	.stickyheader .mobilecta{
+		margin-top: 0px;
+	}
+}
+
+/* custom */
+
+.mobilecta-container {
+	width: 205px;
+	margin-top: 5px;
+	zoom: 0.9;
+}
+.mobilecta-container a {
+	margin-top: 7px;
+}
+.mobilecta-container a, .mobilecta-container button {
+	width: 100%;
+}
+.hamburgericon .icon {
+	vertical-align: -23%;
+}
+
+.desktop_header_form {
+	position: absolute;
+	background: #fff;
+	padding: 0 15px;
+	-webkit-box-shadow: 0px 10px 32px -8px rgba(0,0,0,0.33);
+	-moz-box-shadow: 0px 10px 32px -8px rgba(0,0,0,0.33);
+	box-shadow: 0px 10px 32px -8px rgba(0,0,0,0.33);
+}
+.modal {
+	z-index: 10000001;
+}
+

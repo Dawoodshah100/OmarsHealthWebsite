@@ -1,0 +1,313 @@
+
+
+    /* ------ NAH Overrides ------ */
+
+    
+
+    @media (max-width: 768px){
+      #alternate-claim-form {
+        .site-header {
+          text-align: center !important;
+        }
+
+        .site-header img {
+          margin: 0 auto 20px !important;
+        }
+      }
+    }
+
+    #alternate-claim-form {
+      h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+      }
+
+      .site-header {
+      display: block !important;
+    }
+
+      .site-header-fixed {
+      display: none !important;
+    }
+
+    .page-content > .container:first-child {
+      max-width: 100% !important;
+      padding: 0px !important;
+      margin: 0px !important;
+    }
+
+    .content-main {
+      padding: 0px !important;
+    }
+
+    .m-b-0 .icon {
+      display: none !important;
+    }
+    .small strong {
+      display: none !important;
+    }
+
+      #sticky_id_phone_number {
+        .widget-button {
+          display: none !important;
+        }
+      }
+
+      .page-content {
+      padding-bottom: 0 !important;
+    }
+
+    .threestepcheckwrapper {
+      .threestepcontent {
+        width: 100%;
+
+        .icon {
+          background: $brandcolour3;
+          color: $white;
+          display: table-cell;
+          font-size: 2em;
+          padding: 17px;
+          vertical-align: middle;
+		  img{
+			max-width:140px;  
+		  }	
+        }
+
+        p {
+          background-color: $brandcolour9;
+          color: $brandcolour6;
+        }
+      }
+    }
+    }
+
+    /* ----- End NAH Overrides ----- */
+
+    #alternate-claim-form {
+      position: relative;
+      background-image: url("images/background.jpg");
+      background-position: -700px -500px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: 1400px){
+      #alternate-claim-form {
+        background-position: -1200px -500px;
+      }
+    }
+
+    @media (max-width: 992px){
+      #alternate-claim-form {
+        background-position: -2200px -500px !important;
+      }
+    }
+
+    @media (max-width: 768px){
+      #alternate-claim-form {
+        background-position: -2900px -500px !important;
+      }
+    }
+
+    #alternate-claim-form p,
+    #alternate-claim-form li {
+      font-size: 16px;
+    }
+
+    #header {
+      padding: 40px 0;
+      text-align: left;
+    }
+
+    #introduction {
+      padding: 1em;
+      background-color: $brandcolour3;
+      text-align: left;
+	  h1, h2{
+		margin-top:0;  
+	  }	
+      h1, h2, p {
+        color: $white;
+      }
+    }
+
+    @media (min-width: 992px) {
+      #claim-form {
+        margin-top: 2em;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 992px) {
+      #claim-form {
+        margin-top: 1em;
+      }
+    }
+
+    .callbackform {
+      height: 100%;
+    }
+
+    #usp-wrapper {
+      background-color: $white;
+      padding: 2em;
+      /*color: $brandcolour3;*/
+
+      h3 {
+        color: $brandcolour3;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 0;
+      }
+    }
+
+    #header .usps {
+      counter-reset:li; /* Initiate a counter */
+      margin-top: 2em;
+      margin-left:0; /* Remove the default left margin */
+      padding-left:0; /* Remove the default left padding */
+      z-index: 1;
+    }
+
+    #header .usps > li {
+      /*position:relative;*/  
+      margin:0 0 20px 2em; 
+      /*padding:0px 10px;
+      list-style:none; 
+      color: $brandcolour3;
+      min-height: 50px;*/
+    }
+
+    @media (min-width: 992px){
+      #header .usps > li .connector {
+        position:absolute;
+        border-top:2px solid rgba(255,255,255,0.6);
+        width:25%;
+        top: 50%;
+        transform: translateY(-50%);
+        height:2px;
+        left:-30%;
+        z-index: 1;
+      }
+    }
+
+    #header {
+		ol{   
+		counter-reset: li;	
+		li{
+			border-bottom: 2px solid #e5e5e5;
+			list-style: outside none none;
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+			position: relative;
+		}	
+		li:last-child{
+			margin-bottom:0;
+			padding-bottom:0;
+			border-bottom:0;	
+		}
+		li::before {
+			background: $brandcolour3 url("images/ol-colors.svg") no-repeat scroll -0.45em center / 1em 100%;
+			color: $white;
+			content: counter(li, decimal);
+			counter-increment: li;
+			height: 1.3em;
+			left: -2.15em;
+			line-height: 1.18em;
+			padding-left: 0.1em;
+			position: absolute;
+			text-align: center;
+			top: 0.25em;
+			width: 1.7em;
+		}
+	}		
+	}
+
+    #trustpilot {
+      background-color: #404040;
+      padding: 20px 0;
+    }
+
+    #privacy-policy {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px 0;
+
+      .subtitle {
+        h3 {
+          color: $brandcolour3;
+          text-align: center !important;
+        }
+      }
+	  
+	  .threestepcheckwrapper{
+		.threestepblocks{
+			.threestepblock{
+				.threestepcontent{
+					text-align:center;
+					border:2px solid $brandcolour3;
+					.icon{
+						background:none;
+						display:block;
+					}	
+					p{
+						background:none;
+						display:block;
+					}	
+				}	
+			}
+		}	
+	  }	
+    }
+
+    .privacy-policy-box {
+      padding: 25px 0;
+      color: #00a0ab;
+      font-weight: 500;
+    }
+
+    .privacy-policy-box p {
+      color: #00a0ab;
+    }
+
+    #lighter {
+      background-color: $brandcolour9 !important;
+    }
+
+    /*.privacy-policy-box .icon {
+      text-align: center;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      background-color: #e5f5f5;
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .privacy-policy-box .icon img {
+      width: 50px;
+      height: 50px;
+      height: auto;
+      display: block;
+      margin: 50% auto 0;
+      transform: translateY(-50%);
+    }*/
+
+    
+
+    footer {
+      padding: 40px 0;
+      background-color: #6d6c69;
+    }
+
+    footer p {
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none !important;
+    }

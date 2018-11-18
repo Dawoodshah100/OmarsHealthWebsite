@@ -1,0 +1,448 @@
+﻿@{
+    
+
+       Html.EnableClientValidation();
+       Html.EnableUnobtrusiveJavaScript();
+    
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery-3.2.1.intellisense.js"></script>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery-migrate-3.0.0.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <link href="~/Content/bootstrap-animate-combined.min.css" rel="stylesheet" />
+    <link href="~/Content/extra.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--header starts-->
+    <div id="topofpage"></div>
+    <header class="topheader">
+        <div class="container">
+            <div class="row">
+                <!--logo and start claim wrapper starts-->
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 headerfont">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-xs-12 text-xs-center text-md-left logo largelogo">
+                            <a href="@Url.Action("Index","Home")">
+                                <img src="~/Content/Images/logo.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--logo and start claim wrapper starts-->
+                <!--Contact CTAs start-->
+                <div class="desktopcta col-sm-9 col-md-9 col-lg-9 col-xs-9 hidden-xs">
+                    <div class="row">
+                        <div class="ctas-wrap">
+                            <div class="ctas-title cta-title-header">
+                                <h4>Call us free:</h4>
+                            </div>
+                            <div class="ctas">
+                                <a type="button" class="headercallbackdesktop btn btn-teal headerbuttons callbackbtn callback-header-modal-button-link" id="callback-header-modal-button" data-toggle="modal" data-target="#callback-header-modal">
+                                    Call me back
+                                </a>
+                                <input type="hidden" value="0" id="mchf">
+
+                                <span class="header-button">
+                                    <a class="btn btn-teal headerbuttons digibtn doitonlinebutton" href="@Url.Action("ClaimOnline","Claim")" target="_blank">
+                                        <span id="doitonline_header_button">Claim online</span>
+                                    </a>
+                                </span>
+
+                                <div class="purple medtel-block medtel-block-header">
+                                    <span id="phone_header_button" class="phone_header_button">
+                                        <i class="icon icon-call-us"></i> &nbsp;
+                                        <a id="phone_header_button" class="infinityPhoneNumber2" href="tel:08001234123">
+                                            0800 123 4123
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Contact CTAs end-->
+                <!--mobilemenu starts-->
+                <div class="mobilemenu hidden-xl hidden-lg hidden-md hidden-sm visible-xs">
+                    <div class="mobilecta">
+                        <div class="mobilecta-container">
+                            <button type="button" class="headercallbackdesktop btn btn-teal headerbuttons callbackbtn callback-header-modal-button-link" id="callback-header-modal-button" data-toggle="modal" data-target="#callback-header-modal">
+                                Call me back
+                            </button>
+                            <input type="hidden" value="0" id="mchf">
+                            <span class="header-button">
+                                <a class="btn btn-teal digibtn doitonlinebutton" href="@Url.Action("ClaimOnline","Claim")" target="_blank">
+                                    <span id="doitonline_header_button_mobile_visible">Claim online</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <span class="sticky-phone">
+                        <a id="phone_header_button" class="infinityPhoneNumber2" href="tel:08001234123">
+                            0800 123 4123
+                        </a>
+                    </span>
+                    <div class="hamburgericon">
+                        <i class="icon fa-lg fa fa-bars"></i>
+                    </div>
+                </div>
+                <!--mobilemenu ends-->
+            </div>
+            <div class="mobilectas hidden-xl hidden-lg hidden-md hidden-sm visible-xs pull-right">
+
+                <button type="button" class="headercallbackdesktop btn btn-teal headerbuttons callbackbtn" id="callback-header-modal-button" data-toggle="modal" data-target="#callback-header-modal">
+                    Call me back
+                </button>
+                <div class="desktop_header_form">
+                    <div class="callbackheader col-lg-5 col-xl-6 headerfont">
+                        <div class="callbackform">
+                            <!--Hidden Form-->
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" value="0" id="mchf">
+
+                <span class="header-button">
+                    <a class="btn btn-teal digibtn doitonlinebutton" href="@Url.Action("ClaimOnline","Claim")" target="_blank">
+                        <span id="doitonline_header_button_mobile_visible">Claim online</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <!--mobile cta menu ends-->
+    </header>
+    <nav class="mainnav">
+        <div class="container">
+            <div class="menu-mainnav-container">
+                <ul id="menu-mainnav" class="nav-menu">
+                    <li id="menu-item-2896" class="home-link menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-26 current_page_item" style="background-color:transparent;">
+                        <a href="@Url.Action("Index","Home")"><span class="icon icon-home"></span><i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                    </li>
+                    <li id="menu-item-2898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a href="@Url.Action("ThirdPage","Home")">Injury types<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                        <div class='sub-menu-wrap'>
+                            <ul class='sub-menu'>
+                                <li id="menu-item-2899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("ThirdPage","Home")">Life changing injuries<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-4259" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("ThirdPage","Home")">Serious injury claims<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("FourthPage","Home")">Work related<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2178" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("FourthPage","Home")">Carpal tunnel syndrome<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("FifthPage","Home")">Upper body<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2903" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("FifthPage","Home")">Head and brain injury claims<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("SixthPage","Home")">Lower body injuries<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2915" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("SixthPage","Home")">Back injury claims<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="menu-item-2917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a href="@Url.Action("FifteenthPage","Home")">Accident types<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                        <div class='sub-menu-wrap'>
+                            <ul class='sub-menu'>
+                                <li id="menu-item-2933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("SeventPage","Home")">Medical negligence solicitors<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2934" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("SeventPage","Home")">Misdiagnosis<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-4628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("EigthPage","Home")">Road accidents<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-4257" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("EigthPage","Home")">Car accident claims<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2922" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("EigthPage","Home")">Work accidents<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2923" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("EigthPage","Home")">Industrial accidents<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("NinthPage","Home")">Slips and trips<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("NinthPage","Home")">Supermarket accidents<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("TenthPage","Home")">Other accident types<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2941" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="@Url.Action("TenthPage","Home")">Accidents on holiday<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="menu-item-2946" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a href="@Url.Action("EleventhPage","Home")">No win no fee compensation<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                        <div class='sub-menu-wrap'>
+                            <ul class='sub-menu'>
+                                <li id="menu-item-2947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("EleventhPage","Home")">No win no fee<i class="icon icon-menuarrow"></i><br /><span class="sub">Claiming with us is risk free – our guide explains how fees, solicitors and compensation work.</span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-4258" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("EleventhPage","Home")">All about no win no fee<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("TwelthPage","Home")">Compensation calculator<i class="icon icon-menuarrow"></i><br /><span class="sub">Try our interactive calculator to work out how much you may be entitled to.</span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-4263" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("TwelthPage","Home")">Use our compensation calculator<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="menu-item-2958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a href="@Url.Action("ThirteenthPage","Home")">Making a claim<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                        <div class='sub-menu-wrap'>
+                            <ul class='sub-menu'>
+                                <li id="menu-item-2959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("ClaimOnline","Claim")">Can you claim?<i class="icon icon-menuarrow"></i><br /><span class="sub">Our guide will help you quickly determine if you have a claim.</span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-4260" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("ThirteenthPage","Home")">Use our claim checker<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("FourteenthPage","Home")">Start your claim<i class="icon icon-menuarrow"></i><br /><span class="sub">We have 25 years’ experience in helping people claim the compensation they deserve</span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-8280" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a target="_blank" href="@Url.Action("FourteenthPage","Home")">Start your claim online<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2962" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a href="@Url.Action("FifteenthPage","Home")">FAQs<i class="icon icon-menuarrow"></i><br /><span class="sub">Looking for answers? You’ll find what you need to know about personal injury claims in our handy FAQ guide.</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="menu-item-2965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a href="@Url.Action("FifteenthPage","Home")">About us<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                        <div class='sub-menu-wrap'>
+                            <ul class='sub-menu'>
+                                <li id="menu-item-4007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("FifteenthPage","Home")">Our values<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-2986" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="">Ethical marketing charter<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-2989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="@Url.Action("FifteenthPage","Home")">About us<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-4261" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("FifteenthPage","Home")">All about our company<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li id="menu-item-4076" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                    <a href="@Url.Action("FifteenthPage","Home")">Latest news<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                    <div class='sub-menu-wrap'>
+                                        <ul class='sub-menu'>
+                                            <li id="menu-item-4406" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                <a href="@Url.Action("FifteenthPage","Home")">News<i class="icon icon-menuarrow"></i><br /><span class="sub"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom" style="background-color:transparent;">
+                        <a href="@Url.Action("FifteenthPage","Home")"><i class="icon icon-magnify"></i><i class="icon icon-menuarrow"></i><br><span class="sub"></span></a>
+                        <div id="" class="acf-widget-area menu_widget" role="complementary" style="display: none;">
+                            <div id="search-3" class="menuwidget widget_search">
+                                <form action="@Url.Action("FifteenthPage","Home")" id="searchform" method="get">
+                                    <input type="text" id="q" name="q" value="" placeholder="Search the site..."><input type="submit" value="Go" id="searchsubmit">
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--navigation ends-->
+    <!-- Modal -->
+    <div class="modal fade" id="callback-header-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="callbackheader col-lg-5 col-xl-6 headerfont">
+                        <div class="callbackform">
+                            <!--Form in Modal-->
+                            @Html.Partial("CallMeBack")
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: 0px solid;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ends-->
+
+    <div id="bodydiv">
+        <!-- Body Starts-->
+        @RenderBody()
+        <!-- Body Ends-->
+    </div>
+    <!--footer starts-->
+    <footer class="footerpanel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="display-md-table">
+                        <div id="black-studio-tinymce-3" class="widget_black_studio_tinymce col-md-4 col-sm-4 col-xs-12 display-md-table-cell display-sm-table-cell pull-md-none footer-column">
+                            <h6>Frequently asked questions</h6><div class="textwidget">
+                                <p>Our <a href="@Url.Action("FifteenthPage","Home")">FAQs</a> can give you a good overview of the things you need to know</p>
+                                <p>More information</p>
+                                <ul>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")">Contact us</a></li>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")">Our customer charter</a></li>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")">Our complaints procedure</a></li>
+                                </ul>
+                            </div>
+                        </div>		<div id="recent-posts-4" class="widget_recent_entries col-md-4 col-sm-4 col-xs-12 display-md-table-cell display-sm-table-cell pull-md-none footer-column">
+                            <h6>News</h6>		<ul>
+                                <li>
+                                    <a href="@Url.Action("FifteenthPage","Home")">News Article 1</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("FifteenthPage","Home")">News Article 2</a>
+                                </li>
+
+                            </ul>
+                        </div><div id="black-studio-tinymce-2" class="widget_black_studio_tinymce col-md-4 col-sm-4 col-xs-12 display-md-table-cell display-sm-table-cell pull-md-none footer-column">
+                            <h6>More about us</h6><div class="textwidget">
+                                <ul>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")">About us</a></li>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")">News</a></li>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")">Success stories</a></li>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")">Careers with us</a></li>
+                                    <li><a href="@Url.Action("FifteenthPage","Home")" target="_blank" rel="noopener">About </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--footermenu start-->
+            <div class="footermenu">
+                <div class="menu-footer-menu-container">
+                    <ul id="menu-footer-menu" class="menu">
+                        <li id="menu-item-2232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2232">
+                            <a href="@Url.Action("FifteenthPage","Home")">Terms &#038; conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--footermenu ends-->
+            <!--footer disclaimer starts-->
+            <div class="footerdisclaimer">
+                <p>ANY TEXT    <a href="@Url.Action("FifteenthPage","Home")" target="_blank">GOV.COM</a></p>
+
+
+
+                <div class="copyright col-sm-5">ABCDEFG &copy; &reg;</div>
+                <div class="col-sm-7">
+                    <div id="black-studio-tinymce-4" class="widget_black_studio_tinymce footerlogos">
+                        <div class="textwidget">
+                            <p>
+                                <img src="~/Content/Images/Logo.jpg" alt="Any Image" width="102" height="68" class="alignnone wp-image-3441 alignright" />
+                                <img src="~/Content/Images/Logo.jpg" alt="Any Text" width="255" height="72" class="alignnone wp-image-8887 alignright" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer disclaimer ends-->
+        </div>
+    </footer>
+    <!--footer ends-->
+    <script src="~/Scripts/scripts.js"></script>
+</body>
+
+</html>

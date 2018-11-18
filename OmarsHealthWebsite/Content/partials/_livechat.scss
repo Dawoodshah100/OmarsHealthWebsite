@@ -1,0 +1,25 @@
+/*live chat starts*/
+.LPMcontainer{
+	width:170px !important;
+	.LPMbutton{
+		font-family:$brandfont1 !important;
+		padding-left:55px !important;
+		border-radius:10px 10px 0 0 !important;
+		background:$brandcolour3 !important;
+		overflow:hidden !important;
+		border:2px solid $brandcolour3 !important;
+	}	
+	.LPMbutton:before{
+		background: $white;
+		content: url("images/chat@x4.svg");
+		display: block;
+		float: left;
+		height: 100%;
+		left: 0;
+		padding: 0 7px;
+		position: absolute;
+		top: 0;
+		width: 2.5em;
+	}
+}	
+/*live chat ends*/

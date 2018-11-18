@@ -1,0 +1,496 @@
+/*main banner styles*/
+.herohome
+{
+	background-position:center right;
+	color:$white;
+	position:relative;
+}
+
+.heroinner
+{
+	padding:4rem 4rem 1.5rem;
+}
+
+
+.pagebannercolourblocks
+{
+	margin-bottom:2rem;
+}
+
+.pagecolourblocks 
+{
+	.pagecolourblockslink
+	{
+		text-align:center;
+		color:$white;
+		display:block;
+		position:relative;
+		font-weight:normal;
+		text-align:left;
+		padding:0.85rem;
+		
+		h3
+		{
+			font-size:0.85rem;
+			display:inline;
+			font-weight:normal;
+		}
+		
+		i
+		{
+			display:inline;
+			font-size:1.2rem;
+			margin-right:5px;
+		}
+		
+		.boxcta
+		{
+			display:inline;
+			font-size:1.2rem;
+			display:none;
+			
+			i
+			{
+				margin-left:5px;
+				margin-right:0;
+			}
+		}
+	}
+}
+
+.bannercolourblocks
+{
+	background-color:$brandcolour1;
+	margin:0 !important;
+	margin-top:-45px !important;
+	position:relative;
+	z-index:100;
+	.icon-circle-chevron-right::after
+	{
+		color:$white;
+	}
+	.hero-tile-column
+	{
+		padding: 1rem 0;
+	}
+		
+	.hero-tile-column:first-child
+	{		
+		.hero-tile
+		{
+			border:none;
+		}
+	}
+}
+
+.hero-tile 
+{
+	text-align:center;
+	color:$white;
+	display:block;
+	position:relative;
+	border-left:solid 1px $white;
+	
+	
+	h3
+	{
+		font-size:1.1rem;
+		margin:0;
+		padding:0;
+		font-weight:normal;
+	}
+	
+	.boxcta
+	{
+
+	}
+	
+	.icon:first-child
+	{
+		font-size:2rem;
+	}
+	
+	.icon:last-child
+	{
+		font-size:1.7rem;
+		margin-top:0.8rem;
+		display:block;
+	}
+	
+}
+
+
+.hero-tile:hover
+{
+	color:$white;
+	
+	.icon-circle-chevron-right::after
+	{
+		padding-left:25px;
+		transition: padding-left 0.2s ease;
+	}
+}
+
+.whitetile
+{
+	background-color:$brandcolour7;
+	text-align:center;
+	display:block;
+	height: 11.625rem;
+	position:relative;
+
+	.whitetiletext
+	{
+		color:$brandfontcolour2;
+		padding: 1.5rem 7%;
+		font-size:1em;
+		line-height:1.2;
+		font-weight:normal;
+		
+		span
+		{
+			display: block;
+			font-size: 200%;
+			line-height: 1;
+			color:$brandcolour2;
+			font-weight:bold;
+		}
+		
+		strong
+		{
+			color:$brandcolour1;
+		}
+	}
+	.whitetiletext:last-child{
+		padding: 1.5rem 1.5rem;
+	}
+	
+	.whitetilelink
+	{
+		background-color:$brandcolour6;
+		color:$white;
+		padding:0.625rem;
+		width:100%;
+		position:absolute;
+		bottom:0;
+		font-size:0.75em;
+		height:3.5rem;
+		display:table;
+		text-align:left;
+		
+		.whitetilelinkinner
+		{
+			display:table-cell;
+			vertical-align:middle;
+			font-weight:normal;		
+		}
+		
+		
+		.icon
+		{
+			float:right;
+			font-size:1.5em;
+			width:20px;
+			text-align:right;
+		}
+	}
+}
+
+.whitetile:hover
+{
+	.icon-circle-chevron-right::after
+	{
+		padding-left:8px !important;
+		transition: padding-left 0.2s ease;
+	}
+	
+	.whitetilelink
+	{
+		background-color:$brandcolourhover6;
+	}
+}
+
+.bannertrustpilot
+{
+	background-color:$white;
+	display:table;
+	text-align:center;
+	display:block;
+	height: 11.625rem;
+	position:relative;
+	
+	.trustpilot-widget
+	{
+		display:table-cell;
+		vertical-align:middle;
+		padding:2rem 1rem 0rem 1rem;
+	}
+}
+
+.bannertext
+{
+	font-size: 1.125rem;
+	
+	a
+	{
+		color:$brandcolour5;
+	}
+}
+
+.bannerblocks
+{
+	margin-bottom:2rem;
+	position:relative;
+	z-index:1;
+	h3{
+		color:$white;
+	}	
+	a
+	{
+		color:$white;
+	}
+}
+
+.bannerwhiteblocks
+{
+	margin-bottom:4rem;
+	margin-top:3rem;
+}
+
+.mobiletrustpilot
+{
+	padding-bottom:2rem;
+	display:none !important;
+} 
+.bannerwrap{
+	display:table;
+	width:100%;
+}	
+.bannerhalf{
+	display:table-cell;
+	float:none;
+	padding:0;
+	background:$brandcolour3;
+	position:relative;
+}	
+.bannerhalf:first-child{
+	padding-left:20px;
+}	 
+.mainbannertext
+{
+    color: $white;
+    max-width:50%;
+    padding: 2.5rem 4rem 2.5rem 0rem;
+    position: relative;
+    line-height: 2;
+    z-index: 1;
+    font-size: 1.2rem;
+	text-align:left;
+	
+	h1
+	{
+		font-weight:normal;
+		font-size:1.7rem;
+		margin-top:0;
+		text-align:left;
+		margin-bottom:30px;
+	}
+}
+
+.mainbannerimage
+{
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+.bannerbtn{
+		max-width:725px;
+		width:94%;
+		float:left;
+		margin:auto;	
+		position:absolute;
+		bottom:80px;
+		.mainbannerbtn{
+			padding-left:3em;
+			overflow:hidden;
+			border-radius:0px 20px 20px 0;
+		}
+		
+		.mainbannerbtn:before{
+			content:" ";
+			background:url("images/chat@x4.svg");
+			background-repeat:no-repeat;
+			background-size:80%;
+			background-position:center center;
+			height:100%;
+			width:3em;
+			display:block;
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+		}
+}
+
+@media (max-width: 1200px){
+	.mainbannertext
+	{
+		
+	}
+	.bannerbtn{
+		
+	}	
+}
+
+@media (max-width: 992px){
+	.mainbannertext
+	{
+	}
+	.mainbannerimage{
+	}	
+	.bannerblocks{
+		.hero-tile-column{
+			a{
+				border:none !important;
+			}
+		}
+		
+		.hero-tile-column:nth-of-type(odd){
+			a{
+				border-right:solid 1px $white !important;
+			}
+		}	
+	}	
+}
+
+@media (max-width: 768px){
+	.banner-wrap{
+		display:block;
+	}	
+	.bannerhalf{
+		display:block;
+		width:100%;
+		max-width:100%;
+	}	
+	.bannerhalf:first-child{
+		padding-left:0 !important;
+	}	
+	.mainbannertext
+	{
+		padding:1.2rem 1rem;
+		width:100%;
+		max-width:100%;
+		float:none;
+		h1{
+			font-size:1.1em !important;
+			margin:0;
+		}	
+
+	}
+	.mainbannerimage{
+		min-height:300px;
+		position:relative;
+		display:block;
+	}	
+	.bannerbtn{
+		max-width:100%;
+		width:100%;
+		bottom:0;
+		position:absolute;
+		.mainbannerbtn{
+			bottom:0;
+			border-radius:0 !important;
+			font-size:0.9em;
+			line-height:1em;
+			padding:1em 3em;
+		}		
+	}	
+	.bannerblocks
+	{
+		background:$brandcolour1;
+		max-width:100%;
+		margin-bottom:0 !important;
+		.bannercolourblocks{
+			padding:0 1em;
+			margin:0 !important;
+			margin-top:0 !important;
+		}	
+		margin-bottom:30px;	
+		.hero-tile-column
+		{
+			margin-bottom:20px;
+			display:table;
+			padding:0 0.8em;
+			margin-bottom:0;
+			a
+			{
+				height:5rem;
+				padding:0;
+				text-align:left;
+				display:table-cell;
+				vertical-align:middle;
+				border:none;
+				border-bottom:solid 1px $white !important;
+				
+				.icon
+				{
+					float:right;
+					font-size:1rem;
+					margin:0;
+					margin-top:5px;
+				}
+				icon-circle-chevron-right::after{
+					transition:margin 0.2s ease-in-out;
+				}
+			} 
+			
+			a:hover{
+				.icon-circle-chevron-right::after{
+					padding:0 !important;
+					margin-right:-7px;
+				}
+			}	
+			
+			h3
+			{
+				float:left;
+				text-align:left; 
+				font-size:1rem;
+			}
+		}
+		.hero-tile-column:nth-of-type(odd){
+			a{
+				border-right:none !important;
+			}
+		}	
+		.hero-tile-column:last-of-type{
+			a{
+				border-bottom:none !important;
+			}
+		}	
+	}
+	
+	
+}
+
+@media (max-width: 460px){
+	.bannerbtn{
+		.mainbannerbtn{
+			border-radius: 20px !important;
+			bottom: 20px;
+			font-size: 0.9em;
+			left: 0;
+			line-height: 1em;
+			margin: auto;
+			max-width: 90%;
+			padding: 0.5em 3em;
+			position: absolute;
+			right: 0;
+		}
+	}
+	.mainbannerimage{
+		display: none;
+	}
+}
+
+/*main banner ends*/

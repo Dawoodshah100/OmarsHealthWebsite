@@ -1,0 +1,111 @@
+
+/*page banner starts*/
+.heropage
+{
+	background:$brandcolour3;
+	position:relative;
+	background-repeat:no-repeat;
+	background-size:cover;
+	color:$white;
+	background-position:center center;
+	
+	.heropageimage{
+		background-image:url(images/2-nah-no-win-header.jpg__2280x560_q85_crop_subsampling-2_upscale.jpg);
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center center;
+		position:absolute;
+		background-size:cover;
+		top:0;
+		right:0;
+		height:100%;
+		width:55%;
+		z-index:0;
+	}	
+	.heropagetext
+	{
+		background-color: #3e285e;
+		color: $white;
+		width: 45%;
+		padding:2rem 15px;
+		padding-left:0;
+		margin-left:-15px;
+		position: relative;
+		line-height: 1.35;
+		z-index: 1;
+		font-size: 1.2rem;
+		text-align:left;
+		h1, h2, h3, h4, h5, h6{
+			color:$white; 
+			margin-top:0;
+			text-align:left;
+		}	
+		h1
+		{
+			font-weight:normal;
+			font-size:2.3rem;
+		}
+		
+		.btn, .btn:hover
+		{
+			border:solid 2px $white !important;
+		}
+		
+	}
+	
+	.trustpilotboxheader
+	{		
+		margin:3rem 0 0 0;
+		width:440px;
+		max-width:100%;
+		
+		.trustpilot-widget
+		{
+			#profileLink
+			{
+				float:left !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.heropage {
+		.trustpilotboxheader {
+			margin: 1rem 0 0 0;
+		}
+	}
+}
+/*page banner ends*/
+
+/*post banner starts*/
+
+.heropage.heropost{
+	.heropagetext{
+		h1{ 
+			font-size:1.5em;
+		}
+	}
+}
+
+/*post banner ends*/
+
+
+
+/*category banner starts*/
+.categoryhero
+{
+	position:relative;
+	
+	h1
+	{
+		position:absolute;
+		bottom:0;
+	}
+	
+	.categoryinnerbanner
+	{
+		position:inherit;
+	}
+}
+/*category banner ends*/

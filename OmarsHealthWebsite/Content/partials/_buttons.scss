@@ -1,0 +1,177 @@
+/*button styles start*/
+.btn
+{
+    background-color: $brandcolour6;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.666;
+    padding: 0.2rem 1.5rem;
+	padding-right:3em;
+    transition: box-shadow 0.2s ease 0s, border 0.2s ease 0s, background 0.2s ease 0s;
+    vertical-align: middle;
+    white-space: normal;
+	border-radius:20px;
+	text-align:left;
+	position:relative;
+	color: $white !important;
+	p{
+		margin:0;
+		display:inline;
+	}
+	a{
+		color:$white;	
+		font-weight:normal;
+	}
+}
+
+.btn.smaller {
+	font-size: 0.8em;
+	white-space:normal;
+}
+
+.btn:hover,
+.btn:active,
+.btn:visited{
+	color: $white !important;
+	a{
+		color:$white;	
+	}
+}	
+
+.btn::after{
+	content:"\e91b";
+	color:$white;
+	font-family:icomoon;
+	position:absolute;
+	right:15px;
+	font-size:1.2em;
+	top:50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}	
+
+.btn:hover::after{
+	margin-right:-7px;
+	transition: margin-right 0.2s ease-in-out;
+}	
+
+.btn-block 
+{
+    display: block;
+}
+
+.btn-red, .btn-teal, .btn-green
+{
+    background-color: $brandcolour1;
+    border-color: $brandcolour1;
+    color: $white;
+}
+
+.btn-red.focus, .btn-red:hover, .btn-teal.focus, .btn-teal:hover, .btn-green.focus, .btn-green:hover
+{
+	background-color:$brandcolourhover1 !important;
+	color:$white !important;
+	border-color:$brandcolourhover1 !important;
+}
+
+.btn-purple
+{
+    background-color: $brandcolour3;
+    border-color: $brandcolour3;
+    color: $white;
+}
+
+.btn-purple.focus, .btn-purple:hover,
+{
+	background-color:$brandcolourhover3 !important;
+	color:$white !important;
+	border-color:$brandcolourhover3 !important;
+}
+
+.btn.btn-white
+{
+    background-color: $white;
+    border-color: $white;
+    color: $brandcolour3 !important;
+}
+
+.btn-white::after{
+	color:$brandcolour3;
+}	
+
+.btn-white.focus, .btn-white:hover,
+{
+	background-color:$brandcolour7 !important;
+	color:$brandcolour3 !important;
+	border-color:$brandcolour7 !important;
+}
+
+/*.btn-green 
+{
+    background-color: $brandcolour3;
+    border-color: $brandcolour3;
+    color: $white;
+	
+	a
+	{
+		color:$white;
+		font-weight:normal;
+	}
+}
+
+.btn-green.focus, .btn-green:focus, .btn-green:hover
+{
+	background-color:#2A9658 !important;
+	color:$white !important;
+	border-color:#2A9658 !important;
+}*/
+
+.button_link 
+{
+	margin:1em auto;
+	/*width:100%;*/
+	display:table;
+	padding:0.5em
+	
+	a
+	{
+		color:$white;
+		font-weight:normal;
+	}
+}
+
+.headerbuttons .icon::after, .headerbuttons .icon
+{
+	color: $white !important;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.medtel-block .icon a
+{
+	font-family:icomoon;
+	color:$brandcolour3;
+}
+
+.headerbuttons
+{
+	.icon-circle-chevron-right::after{
+		position:absolute;
+		right:0;
+		top:0;
+	}
+}
+
+.headerbuttons:hover
+{
+	.icon-circle-chevron-right::after{
+		padding-left:25px;
+		transition: padding-left 0.2s ease;
+		position:absolute;
+		right:0;
+		top:0;
+	}
+}
+/*button styles end*/

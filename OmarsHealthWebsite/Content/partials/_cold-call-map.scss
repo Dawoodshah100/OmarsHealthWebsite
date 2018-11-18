@@ -1,0 +1,331 @@
+$red: #AD4545;
+$lightred: #CC5252;
+$orange: #CC7054;
+$lightorange: #CC9656;
+$yellow: #CCB658;
+$lightgreen: #C4CC5A;
+$midgreen: #87CC5E;
+$darkgreen: #60CC74;
+$teal: #62CCA9;
+
+@mixin mobile-map($colour) {
+  	.accordiantitle {
+		border-top: 1px solid $colour !important;
+	}
+	h2:after {
+		color: $colour !important;
+	}
+}
+
+.mapred{fill:$red;}
+.maplightred{fill:$lightred;}
+.maporange{fill:$orange;}
+.maplightorange{fill:$lightorange;}
+.mapyellow{fill:$yellow;}
+.maplightgreen{fill:$lightgreen;}
+.mapmidgreen{fill:$midgreen;}
+.mapdarkgreen{fill:$darkgreen;}
+.mapteal{fill:$teal;}
+.mapgrey{fill-rule:evenodd;clip-rule:evenodd;fill:#F1F1F1;}
+.maptextbox{fill:none;}
+.maptext1{fill:#FFFFFF;}
+.maptext2{font-family:'Montserrat';font-weight:600;}
+.maptext3{font-size:28px;}
+.maptextbox2{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+.mapletterspacing{letter-spacing:63;}
+.mapopacity{opacity:0.9;}
+
+.mapselectedarea{
+	.maparea
+	{
+		fill: $brandcolour3 !important
+	}
+}
+
+.mapareagroup
+{
+	cursor:pointer;
+}
+
+.cold-calling-map
+{
+	position: relative;
+	margin: auto;
+}
+
+.cold-calling-map-wrapper 
+{
+	max-width:80%;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	width: 80%;
+	padding-bottom: 100%; 
+	vertical-align: middle; 
+	overflow: hidden;
+	text-align: center;
+
+	.svg-content { 
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.mapkey
+{
+	@media (min-width: 710px){
+		border:solid 1px $brandcolour3;
+		color: $brandcolour3;
+		max-width:25%;
+		padding: 1.5%;
+		position: absolute;
+		left: 0;
+		top:0;
+	}
+
+	@media (max-width: 710px){
+		position: relative;
+		border: 0;
+		color: $brandcolour3;
+		padding: 1em 1.5%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	p
+	{
+		font-size:0.8rem !important;
+	}
+	
+	.mapkeyitem
+		{
+			font-size:0.8rem !important;
+
+			@media (max-width: 710px){
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+			}
+		}
+		
+		.mapkeydot
+		{
+			width:15px;
+			height: 15px;
+			border-radius: 100%;
+			display: inline-block;
+			margin-right:10px;
+			margin-top:5px;
+
+			@media (max-width: 710px){
+				vertical-align: middle;
+				display: block;
+				width: 15px;
+				height: 15px;
+				margin: 0 5px;
+			}
+		}
+		
+		.greydot
+		{
+			background-color: #F1F1F1;
+		}
+		
+		.reddot
+		{
+			background-color: $red;
+		}
+		
+		.lightreddot
+		{
+			background-color: $lightred;
+		}
+		
+		.orangedot
+		{
+			background-color: $orange;
+		}
+		
+		.lightorangedot
+		{
+			background-color: $lightorange;
+		}
+
+		.yellowdot
+		{
+			background-color: $yellow;
+		}
+
+		.lightgreendot
+		{
+			background-color: $lightgreen;
+		}
+
+		.midgreendot
+		{
+			background-color: $midgreen;
+		}
+
+		.darkgreendot
+		{
+			background-color: $darkgreen;
+		}
+
+		.tealdot
+		{
+			background-color: $teal;
+		}
+}
+
+.mapstats
+{
+	background-color:$brandcolour3;
+	color: $white;
+	max-width:25%;
+	width:25%;
+	padding: 1.5%;
+	position: absolute;
+	right: 0;
+	top:0;
+	display: none;
+	
+	p, ul, li
+	{
+		font-size:0.8rem !important;
+
+		@media (max-width: 1200px){
+			font-size: 0.7rem !important;
+		}
+	}
+	
+	li
+	{
+		border:0 !important;
+	}
+
+	li:before {
+		background-image: url('images/ul-icon-map.svg') !important;
+		width: 1.35em !important;
+		height: 1.35em !important;
+	}
+}
+
+.mobilemap
+{
+	display: none;
+	
+	img
+	{
+		display: block;
+		margin: auto;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.accordianwrapper {
+		.accordian-border {
+			.accordiantitle {
+				margin-top: 1em;
+				padding-top: 1em;
+				border-top: 1px solid $brandcolour7;
+
+				h2 {
+					font-size: 1.25em;
+				}
+			}
+
+			.region-img {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				max-width: 25%;
+				height: auto;
+
+				img {
+					display: inline-block;
+					width: 100%;
+					height: auto;
+				}
+
+				@media (max-width: 480px){
+					display: block;
+					max-width: 35%;
+					margin: 0 auto 1em;
+				}
+			}
+
+			.region-text {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				max-width: 70%;
+
+				@media (max-width: 480px){
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	#york-humber {
+		@include mobile-map($red);
+	}
+
+	#north-east {
+		@include mobile-map($lightred);
+	}
+
+	#wales {
+		@include mobile-map($orange);
+	}
+
+	#east-england {
+		@include mobile-map($lightorange);
+	}
+
+	#south-east {
+		@include mobile-map($yellow);
+	}
+
+	#west-midlands {
+		@include mobile-map($lightgreen);
+	}
+
+	#south-west {
+		@include mobile-map($lightgreen);
+	}
+
+	#scotland {
+		@include mobile-map($lightgreen);
+	}
+
+	#north-west {
+		@include mobile-map($midgreen);
+	}
+
+	#northern-ireland {
+		@include mobile-map($darkgreen);
+	}
+
+	#east-midlands {
+		@include mobile-map($darkgreen);
+	}
+
+	#london {
+		@include mobile-map($teal);
+	}
+}
+
+@media (max-width: 710px){
+	.desktopmap
+	{
+		display: none;
+	}
+	
+	.mobilemap
+	{
+		display: block;
+	}
+}

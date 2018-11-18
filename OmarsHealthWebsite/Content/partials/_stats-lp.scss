@@ -1,0 +1,62 @@
+/*** Stats Landing Page ***/
+
+
+#stats-lp {
+	#header {
+		position: relative;
+		background-position: center -100px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: auto;
+		width: 100%;
+
+		#introduction {
+			text-align: left;
+			h2{
+				text-align:left;
+			}	
+		}
+
+		.widget-form-small {
+			margin-top: 1em;
+			border: 5px solid $brandcolour1;
+
+			.btn {
+				background-color: $brandcolour1 !important;
+			}
+		}
+	} 
+
+	#blue-banner {
+		background-color: $brandcolour7;
+		padding: 2rem 0;
+		text-align: center;
+
+		p {
+			font-size: 1.75rem;
+			font-weight: 400;
+			color: $brandcolour1;
+		}
+	}
+
+	.usps {
+		padding: 3em 0;
+
+		li {
+		    list-style: outside none none;
+		    margin: 0 0 20px 4em;
+		    min-height: 50px;
+		    padding: 0 10px;
+		    position: relative;
+		}
+	}
+
+	.casestudywrapper {
+		h3{
+			color:#fff;
+			text-align:left;
+		}	
+		padding: 20px;
+
+	}
+}

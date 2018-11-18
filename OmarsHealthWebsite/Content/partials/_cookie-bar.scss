@@ -1,0 +1,85 @@
+.nah-cookie-notice
+{
+	padding:15px;
+	color: $white;
+	background-color: $brandcolour4;
+	font-weight: 200;
+	font-size: 1rem;
+	display: none;
+	
+	p {
+		margin-bottom:0;
+	}
+	
+	.cookieclose
+	{
+		text-align: right;
+	}
+	
+	
+	.icon-close-modal
+	{
+		font-size:1.5rem;
+	}
+
+	a {
+		color: $white !important;
+	}
+
+	a:hover {
+		color: #00a3a6 !important;
+	}
+}
+
+@media (max-width: 768px){
+	.nah-cookie-notice
+	{
+		font-size: 0.8rem;
+
+		.icon-close-modal
+		{
+			
+		}
+	}
+}
+
+
+.nah-cookie-notice-2
+{
+	padding:15px;
+	color: $brandcolour3;
+	background-color: $brandcolour7;
+	font-weight: 200;
+	font-size: 1rem;
+	border-bottom:solid 4px $brandcolour1;
+	
+	.icon-close-modal
+	{
+		font-size:1.5rem;
+	}
+	display: none;
+}
+
+
+/* Display the hand pointer while hovering over the close icon */
+.icon-close-modal:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 768px){
+	.nah-cookie-notice-2, .nah-cookie-notice
+	{
+		font-size: 0.8rem !important;
+		
+		p
+		{
+			text-align: left !important;
+			font-size: 0.8rem !important;
+		}
+
+		.icon-close-modal
+		{
+			
+		}
+	}
+}
